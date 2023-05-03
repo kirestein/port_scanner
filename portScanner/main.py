@@ -1,16 +1,7 @@
-# This is a sample Python script.
+import socket
 
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
+client = socket.socket(socket.AF_INET, socket.SOCK_STREAM) # IPV4 e TCP IP
 
+code = client.connect_ex(('google.com', 80))
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
-
-
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+print(f'{code=}')
